@@ -4,7 +4,7 @@
 #  	A tool to help plan ccd imaging sessions	
 #  	by R. C. Altenburg
 #
-#	Requires PyEphem
+#	Requires PyEphem http://rhodesmill.org/pyephem/
 #
 #
 import ephem, math, datetime, re, argparse, sys
