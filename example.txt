@@ -1,0 +1,8 @@
+; Example Observing Plan
+;
+#vphot
+#count 1
+#interval 70
+#binning 1
+#filter V
+SS Cyg	21.712	43.586
