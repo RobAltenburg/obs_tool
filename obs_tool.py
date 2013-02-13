@@ -80,6 +80,8 @@ def process_plan (target_list, time_string=''):
 	print "Astronomical twilight:\n\tNext ending: %s" %(ut_to_local_string(observatory.next_setting(ephem.Sun(),use_center=True)))
 	print "\tNext beginning: %s" %(ut_to_local_string(observatory.next_rising(ephem.Sun(),use_center=True)))
 	print "Moon age: %3.2f days -- Ilumination: %3.1f%%" % (moon_days, moon.phase)
+	print "\tNext Moon rise: %s" % (ut_to_local_string(observatory.next_rising(moon)))
+	print "\tNext Moon set: %s" % (ut_to_local_string(observatory.next_setting(moon)))
 	observatory.horizon = '0'
 	print "---------------------------------\n"
 
@@ -91,6 +93,7 @@ def process_plan (target_list, time_string=''):
 		print "Target: %s" %(varstar.name)
 		try:
 			print "Altitude: %3.2f" % (math.degrees(varstar.alt))
+			print "Azimuth: %3.2f" % (math.degrees(varstar.az))
 			print "Next rise: %s" % (ut_to_local_string(observatory.next_rising(varstar)))
 			print "Next set: %s" % (ut_to_local_string(observatory.next_setting(varstar)))
 		except ephem.AlwaysUpError:
